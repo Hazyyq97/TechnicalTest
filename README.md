@@ -1,5 +1,5 @@
 # TechnicalTest
-Prerequisites
+**Prerequisites**
 
 Before building and hosting the application, ensure the following tools and frameworks are installed:
 
@@ -11,7 +11,7 @@ Before building and hosting the application, ensure the following tools and fram
 
 - A modern web browser for testing the application.
 
-Running the Application Locally
+**Running the Application Locally**
 
 - Start the development server:
 
