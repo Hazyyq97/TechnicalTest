@@ -1,0 +1,45 @@
+﻿@model NumberDto
+
+<div>
+    <form asp-action="NumberToWord">
+        <br />
+        <div class="container border p-3">
+            <h1 class="text-white text-center">Number To Words</h1>
+
+            <hr />
+            <div class="row">
+                <div class="col-2">
+                    <label class="control-label pt-2" style="font-size:20px;">Number</label>
+                </div>
+                <div class="col-10 pb-3">
+                    <input asp-for="Number" class="form-control" />
+                    <span asp-validation-for="Number" class="text-danger"></span>
+                </div>
+                <div class="col-5 offset-2">
+                    <input type="submit" value="Submit" class="btn btn-success form-control" />
+                </div>
+                <div class="col-5">
+                    <a asp-action="NumberToWord" class="btn-primary btn form-control">Clear</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    @if (ViewData["Answer"] != null)
+    {
+        <div class="container border p-3">
+            <div class="row">
+                <div class="col-2">
+                    <label class="control-label pt-2" style="font-size:20px;">Result</label>
+                </div>
+                <div class="col-10 pb-3">
+                    <label class="control-label pt-2" style="font-size:20px;">@ViewData["Answer"]</label>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
